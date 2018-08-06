@@ -1,5 +1,49 @@
 # Change Log
 
+## [2.1.0] - 2018-04-19
+
+### Added
+
+* `user_name` parameter for the `[members_access]` shortcode.
+* `user_id` parameter for the `[members_access]` shortcode.
+* `user_email` parameter for the `[members_access]` shortcode.
+* `icon-members-core-create-caps.png` file for local access to the corresponding add-on thumbnail.
+
+### Fixed
+
+* Incorrect roles (or empty roles) appearing on sub-sites when running multisite.
+* Invalid icon URL on the Settings > Members > Add-ons admin screen.
+* Fix for WooCommerce empty page ID in the private site feature.
+
+### Changed
+
+* Bumped minimum PHP requirement to 5.6+. However, the code should still work on PHP 5.3. This is in preparation for a hard requirement of 5.6+ when version 3.0.0 is released.
+
+## [2.0.2] - 2017-11-06
+
+### Fixed
+
+* Role labels should now be handled correctly where the plugin outputs them.  This was not corrected in 2.0.1 as previously thought.
+
+### Security
+
+* Corrected a capability escalation issue on multisite where administrators could assign themselves network caps.  Administrators are no longer given the `create_role`, `edit_role`, and `delete_role` caps on multisite.  A Super Admin must manually set these caps if they want to grant them to a site administrator.  Additionally, network caps are always blocked from being assigned.
+
+## [2.0.1] - 2017-09-28
+
+### Changed
+
+* Cap groups registered by the plugin bumped up 5 in priority. Primarily, this was to make sure post type cap groups were registered earlier than the default of `10`.
+* Better handling of the PHP notice.  We're going to check prior to loading any other code and add an admin notice if the site doesn't meet minimum requirements.
+
+### Fixed
+
+* The `show_human_caps` setting was not properly saving because it wasn't accounted for in the validation callback.
+* Make sure to use the correct `$old_user_data` variable when removing all roles from a user. Otherwise, this doesn't work.
+* Super admins should be able to see any private site when multisite is enabled.
+* Make sure that role labels (where the plugin outputs them) are the translated version.
+* Multi-role selection has been removed for the Add New User screen on multisite installs.  This was to address multiple issues in core with hardcoded values that the plugin couldn't filter.  The feature may return in the future in a different form.  Note that this doesn't change single-site installs.
+
 ## [2.0.0] - 2017-07-19
 
 ### Added
