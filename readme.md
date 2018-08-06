@@ -1,4 +1,9 @@
-#WP Theme StarterKit <Monkey Theatre Studio>
+# PROJECT "ORGANIC THEME"
+New monkey-theatre.com WordPress theme. Illustrated with organic style.
+
+
+## BASED ON:
+###WP Theme StarterKit <Monkey Theatre Studio>
 
 WordPress Starter Theme used by Monkey Theatre Studio (Mnkt.) as a bootstrap for new project.
 
