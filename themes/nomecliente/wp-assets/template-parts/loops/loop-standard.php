@@ -31,7 +31,7 @@
 			<?php the_content(); ?>
 
 			<?php wp_link_pages( array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+				'before'      => '<div class="page-links">' . __( 'Pagine:', 'mnkLang' ),
 				'after'       => '</div>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
@@ -58,5 +58,5 @@
 
 	<?php /* FINE LOOP SINGLE */ ?>
 	<?php endwhile; else : ?>
-		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<p><?php esc_html_e( 'Mi dispiace, nessun post è stato trovato con queste caratteristiche.' ); ?></p>
 	<?php endif; ?>
